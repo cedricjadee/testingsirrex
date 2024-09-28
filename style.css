@@ -9,7 +9,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    min-height: 100vh; 
     background: url(jade.jpg);
     background-size: cover;
 }
@@ -816,29 +816,63 @@ header{
     font-weight: 500;
   }
 
-  @media(max-width: 1400px){
-    .low{
-        transform: translateY(-100px);/* Move the image higher */
-      }
-    
-  }
+  
 /* Media Query for Tablets (600px to 900px) */
 /* Media Query for Tablets (600px to 900px) */
 /* Media Query for Tablets (max-width: 900px) */
 /* Media Query for Tablets (max-width: 900px) */
+
+
 @media (max-width: 900px) {
+
+   .search-bar{
+    transform: translateX(120px);
+   }
+  
     .navi {
-      width: 25%; /* Responsive navigation width */
+      margin-right: 10px;
+      width: 100%; /* Full-width navigation on mobile */
+      height: 10vh; /* Dynamic height */
+      flex-direction: row;
+    }
+
+    .all-notes i {
+      margin-right: 2px;
+    }
+    
+    .favorites i {
+      margin-right: 2px;
+      margin-left: -2px;
+    }
+    
+    .archives i {
+      margin-right: 3px;
+      margin-left: -7px;
+    }
+    
+    .logout i {
+      margin-right: 5px;
+      margin-left: -5px;
     }
   
     .navi h1 {
       font-size: 40px; /* Main heading font size */
-      margin: 15px 0 20px; /* Simplified margin */
+      margin: 10px 20px 20px;
       text-align: center; /* Center the heading */
+    }
+
+    .nav-bar{
+      display: flex;
+      flex-direction: row;
+      margin-top: 20px;
+    }
+
+    .nav-bar .logout a{
+      padding-right: 80px;
     }
   
     .nav-bar a {
-      padding-left: 30px; /* Spacing for navigation links */
+      padding-left: 10px; /* Spacing for navigation links */
       font-size: 1em; /* Consistent link font size */
       transition: color 0.3s; /* Smooth color transition on hover */
     }
@@ -869,92 +903,31 @@ header{
     }
   
     .low {
-      margin-top: 200px; /* Space above the low section */
       display: flex; /* Flexbox layout */
-      flex-direction: column; /* Stack elements */
-      align-items: center; /* Center align */
+      flex-direction: row; /* Stack elements */
+      margin-right: 40px;
     }
   
     .low img {
+      transform: translateY(-270px);
       margin: -20px auto 10px; /* Adjust image position */
       border-radius: 50%; /* Circular image */
-      width: 60px; /* Set image width */
-      height: 60px; /* Set image height */
+      width: 40px; /* Set image width */
+      height: 40px; /* Set image height */
     }
   
     .low h2 {
+      transform: translateY(-285px) translateX(10px);
       font-size: 18px; /* Main heading font size */
       color: #fff; /* Consistent color */
     }
   
     .low h3 {
+      transform: translateY(-285px) translateX(10px);
       font-size: 15px; /* Subheading font size */
       color: #ccc; /* Lighter color for contrast */
     }
-  }
-  
-  /* Media Query for Mobile Devices (max-width: 600px) */
-  @media (max-width: 600px) {
-    .navi {
-      width: 100%; /* Full-width navigation on mobile */
-      height: auto; /* Dynamic height */
-    }
-  
-    .navi h1 {
-      font-size: 32px; /* Smaller heading font size */
-    }
-  
-    .nav-bar {
-      margin-bottom: 150px; /* Space below navigation */
-    }
-  
-    .nav-bar a {
-      padding-left: 20px; /* Reduced padding for links */
-      font-size: 0.9em; /* Slightly smaller font size */
-    }
-  
-    .search-bar input {
-      width: 100%; /* Full-width input for mobile */
-      height: 35px; /* Consistent height */
-    }
-  
-    .body {
-      flex-direction: column; /* Stack content vertically */
-      height: auto; /* Allow dynamic height */
-    }
-  
-    .header {
-      width: 100%; /* Full-width header */
-      margin: 10px 0; /* Margin around header */
-      padding: 20px; /* Consistent padding */
-    }
-  
-    .low {
-      margin-top: 200px; /* Maintain top margin */
-      flex-direction: column; /* Stack elements */
-      align-items: center; /* Center alignment */
-    }
-  
-    .low img {
-      margin: 0 auto; /* Center the image */
-      width: 50px; /* Adjust image size for mobile */
-      height: 50px; /* Adjust image size for mobile */
-    }
-  
-    .low h2 {
-      font-size: 18px; /* Maintain font size */
-    }
-  
-    .low h3 {
-      font-size: 15px; /* Maintain font size */
-    }
-  
-    .note-textarea {
-      height: 150px; /* Set height for textarea */
-      border-radius: 5px; /* Rounded corners */
-      padding: 10px; /* Inner padding */
-    }
-  
+
     .date-label,
     .time-label {
         transform: translateX(180px);
@@ -962,5 +935,9 @@ header{
       font-size: 12px; /* Font size for labels */
       color: #bababa; /* Subtle color for labels */
     }
+
+
   }
+  
+  
   
